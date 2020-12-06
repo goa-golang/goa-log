@@ -1,4 +1,4 @@
-package goa_log
+package goalog
 
 import (
 	"log"
