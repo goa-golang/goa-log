@@ -29,8 +29,20 @@ func TestColor(t *testing.T) {
 }
 
 func TestLog(t *testing.T) {
+
+	type TestStruct struct {
+		Name string
+		Age  int
+	}
+
 	Debug("测试输出语句")
 	Info("Info")
 	Warn("Warn")
-	Error("Error")
+	Debug(1)
+	Info(2)
+	Warn(3)
+	Debug(TestStruct{Name: "debug", Age: 1})
+	Info(TestStruct{Name: "Info", Age: 1})
+	Warn(TestStruct{Name: "Warn", Age: 1})
+	Fatal(TestStruct{Name: "Fatal", Age: 1})
 }
