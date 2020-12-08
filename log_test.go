@@ -35,14 +35,15 @@ func TestLog(t *testing.T) {
 		Age  int
 	}
 
-	Debug("测试输出语句")
-	Info("Info")
-	Warn("Warn")
-	Debug(1)
-	Info(2)
-	Warn(3)
-	Debug(TestStruct{Name: "debug", Age: 1})
+	//Debug("测试输出语句1","测试输出语句1",1111,"测试输出语句1",)
+	//Info("Info")
+	//Warn("Warn")
+	//Debug(1)
+	//Info(2)
+	//Warn(3)
+	Fatal(TestStruct{Name: "Fatal", Age: 1})
+	Debug("ASDFSADFASDF", TestStruct{Name: "debug", Age: 1})
 	Info(TestStruct{Name: "Info", Age: 1})
 	Warn(TestStruct{Name: "Warn", Age: 1})
-	Fatal(TestStruct{Name: "Fatal", Age: 1})
+
 }
